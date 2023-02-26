@@ -22,6 +22,8 @@ use App\Http\Controllers\PageController as PageController;
 
 Route::get('/', [PageController::class, 'index']) ->name('homepage');
 
+Route::resource('comics', PageController::class);
+
 // Route::get('/comic/{id}', function($id){
 //     $comics = config('comics');
 
