@@ -1,0 +1,305 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+/*GENERAL*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #1C1C1C;
+    font-family: Roboto Condensed, sans-serif;
+    font-weight: 700;
+}
+
+.section-padding{
+    padding: 0 150px;
+}
+
+
+/*HEADER*/
+
+.es_blueheader{
+    font-weight: 400;
+}
+
+.es_blueheaderlink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.es_blueheaderlink:hover{
+    color: #fff;
+}
+
+img[alt="dc-logo"]{
+    height: 70px;
+    margin-right: 20px;
+}
+
+.es_menu:hover{
+    color: #0282F9 !important;
+    border-bottom: 3px solid #0282F9;
+}
+
+.es_activemenu{
+    color: #0282F9 !important;
+    border-bottom: 3px solid #0282F9;
+}
+
+
+/*MAIN*/
+
+.es_container{
+    margin: 0;
+}
+
+.es_jumbotron{
+    background-image: url(/resources/img/jumbotron.jpg);
+    height: 500px;
+    background-size: cover;
+}
+
+.es_comicontainer{
+    background-color: #1C1C1C;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.current-series{
+    background-color: #0282F9;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 25px;
+    margin-top: -80px;
+    margin-bottom: 100px;
+    position: absolute;
+    width: 280px;
+}
+
+.es_card{
+    background-color: transparent;
+}
+
+.es_cardlink{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.es_cardlink:hover{
+    color: #0282F9;
+}
+
+.load-more{
+    background-color: #0282F9;
+    padding: 10px 70px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13pt;
+    border: 2px solid #0282F9;
+    transition: all 0.1s;
+}
+
+.load-more:hover{
+    background-color: #1C1C1C;
+    border: 2px solid #0282F9;
+    cursor: pointer;
+}
+
+
+/*FOOTER*/
+
+.bluefootericon{
+    width: 80px;
+    height: 80px;
+    margin: 50px 15px 35px 15px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.digitalcomics{
+    background-image: url('/resources/img/buy-comics-digital-comics.png');
+}
+
+.dcmerchandise{
+    background-image: url('/resources/img/buy-comics-merchandise.png');
+}
+
+.subscription{
+    background-image: url('/resources/img/buy-comics-subscriptions.png');
+}
+
+.comicshoplocator{
+    background-image: url('/resources/img/buy-comics-shop-locator.png');
+}
+
+.dcpowervisa{
+    background-image: url('/resources/img/buy-dc-power-visa.svg');
+}
+
+.icon-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-list li{
+    display: flex;
+    align-items: center;
+}
+
+.icon-list img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.footer-main{
+    background-image: url('/resources/img/footer-bg.jpg');
+    background-size: cover;
+    padding: 0px 10%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.footer-img{
+    margin: -100px 0;
+}
+
+.footer-img-logo{
+    rotate: 330deg;
+    opacity: 0.5;
+    width: 563px;
+}
+
+.footer-list{
+    display: flex;
+    margin: 50px 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-list ul{
+    list-style-type: none;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+.footer-list a{
+    color: inherit;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer-list h3{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+}
+
+.footer-bottom{
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10%;
+}
+
+#sign-up-btn{
+    border: 2px solid #0282F9;
+    padding: 10px;
+    background-color: #1C1C1C;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.1s;
+}
+
+#sign-up-btn:hover{
+    cursor: pointer;
+    background-color: #0282F9;
+}
+
+.social-container{
+    display: flex;
+    align-items: center;
+}
+
+.social-container p{
+    color: #0282F9;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.social-container ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.es_noround{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #1C1C1C;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.es_noround .fa-facebook-f{
+    padding: 13px 5px;
+}
+
+.es_noround .fa-twitter{
+    padding: 13px 2px;
+}
+
+.es_noround .fa-pinterest-p{
+    padding: 13px 3px;
+}
+
+.es_noround .fa-periscope{
+    padding: 13px 3px;
+}
+
+/*SINGLE PAGE*/
+
+.es_comicblue{
+    background-color: #0282F9;
+}
+
+.es_comicover{
+    width: 220px;
+    margin-top: -250px;
+    margin-bottom: 20px;
+}
+
+.es_comicpage h2, .es_comicpage h3{
+    color: #003F5E;
+    font-weight: 700;
+}
+
+.es_comicpage h2{
+    text-transform: uppercase;
+}
+
+.es_comicpage p{
+    font-weight: 400;
+}
+
+.es_ad{
+    width: 300px;
+    height: 250px;
+    background-image: url('/resources/img/adv.jpg');
+}
+
+.es_comicgrey{
+    font-weight: 400;
+}
+
+.es_bluetitle{
+    color: #003F5E;
+}
