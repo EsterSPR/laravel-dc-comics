@@ -7,7 +7,8 @@ use App\Models\Comic;
 
 class PageController extends Controller
 {
-    public function index(){
-        return view('homepage');
+    public function index(){        
+        $comics = Comic::all();
+        return view('homepage', ['comics' => $comics]);
     }
 }

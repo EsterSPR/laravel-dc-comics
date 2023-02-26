@@ -14,13 +14,18 @@
                     <img src="{{ $comic['thumb'] }}" class="card-img-top" alt="{{ $comic['title'] }}">
                     <div class="card-body px-0">
                         <h6 class="card-title">{{ $comic['title'] }}</h6>
+                        <!-- <p class="card-text">{{ $comic['description'] }}</p> -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ $comic['price'] }}</li>
+                            <li class="list-group-item">{{ $comic['series'] }}</li>
+                            <li class="list-group-item">{{ $comic['sale_date'] }}</li>
+                            <li class="list-group-item">{{ $comic['type'] }}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             @endforeach
-
-            <div class="w-100 text-center mt-3"><button class="load-more">LOAD MORE</button></div>
 
         </div>
 
