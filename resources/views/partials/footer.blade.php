@@ -1,4 +1,4 @@
-<footer>
+<!-- <footer>
 
     <div class="row w-100 bg-primary m-0 section-padding footer-top">
       <ul class="icon-list text-white">
@@ -82,4 +82,4 @@
         </div>
     </div>
     
-</footer>
+</footer> -->

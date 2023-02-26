@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ComicController as ComicController;
+use App\Http\Controllers\PageController as PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,17 +20,17 @@ use App\Http\Controllers\ComicController as ComicController;
 //     return view('comics', compact('comics'));
 // }) ->name('comics');
 
-Route::get('/', [ComicController::class, 'index']) ->name('comics');
+Route::get('/', [PageController::class, 'index']) ->name('homepage');
 
-Route::get('/comic/{id}', function($id){
-    $comics = config('comics');
+// Route::get('/comic/{id}', function($id){
+//     $comics = config('comics');
 
-    foreach($comics as $comic){
-        if($comic['title'] == $id){
-            $single = $comic;
-        }
-    }
+//     foreach($comics as $comic){
+//         if($comic['title'] == $id){
+//             $single = $comic;
+//         }
+//     }
 
-    return view('singlecomic', compact('single'));
+//     return view('singlecomic', compact('single'));
 
-}) ->name('singlecomic');
+// }) ->name('singlecomic');
