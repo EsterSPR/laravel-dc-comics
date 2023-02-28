@@ -1,5 +1,4 @@
 @extends('layout.app')
-@section('page-title', 'DC Comics')
 
 @section('content')
 
@@ -9,8 +8,8 @@
 
             @foreach($comics as $comic)
 
-            <div class="col-2">
-                <div class="card h-100 border-0 es_card">
+            <div class="col-2 my-3">
+                <div class="card h-100">
                     <img src="{{ $comic['thumb'] }}" class="card-img-top" alt="{{ $comic['title'] }}">
                     <div class="card-body px-0">
                         <h6 class="card-title">{{ $comic['title'] }}</h6>

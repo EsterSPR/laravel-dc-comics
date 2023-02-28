@@ -9,6 +9,6 @@ class PageController extends Controller
 {
     public function index(){        
         $comics = Comic::all();
-        return view('homepage', ['comics' => $comics]);
+        return view('comics.index', ['comics' => $comics]);
     }
 }
