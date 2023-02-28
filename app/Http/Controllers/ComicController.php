@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comic;
+
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Validator;
+
 
 class ComicController extends Controller
 {
@@ -25,7 +30,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -36,7 +41,15 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newComic = new Comic();
+
+        $form_data = $this->validation($request->all());
+
+        $newComic->fill($form_data);
+           
+        $newComic->save();
+ 
+        return redirect()->route('comics.store');
     }
 
     /**
@@ -47,7 +60,7 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        $comic = Movie::findOrFail($id);
+        $comic = Comic::findOrFail($id);
         return view('comics.show', $comic);
     }
 
@@ -83,5 +96,33 @@ class ComicController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function validation($data){
+
+        $validator = Validator::make($data,[
+            'titolo' => 'required|max:60',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'required',
+            'series' => 'required',
+            'sale_date' => 'required|date_format:Y-m-d',
+            'type' => 'required',
+        ],
+
+        [
+            'titolo.required' => 'Title is required!',
+            'titolo.max' => 'Title can\'t be longer than 50 characters!',
+            'description.required' => 'Description is required!',
+            'thumb.required' => 'Cover image is required!',
+            'price.required' => 'Price is required!',
+            'series.required' => 'Serie is required!',
+            'sale_date.required' => 'Date is required!',
+            'sale_date.date_format' => 'Date format is wrong: YYYY-MM-DD',
+            'type.required' => 'Type is required!',
+
+        ])->validate();
+        
+        return $validator;
     }
 }
